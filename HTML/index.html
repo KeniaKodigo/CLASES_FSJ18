@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- aceptamos todo tipo de caracter  -->  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- sera compatible con cualquier navegador -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- sera compatible con cualquier dispositivo --> 
+    <title>El Sazon</title>
+</head>
+<body>
+    <!-- encabezado -->
+    <header>
+        <!-- asignando un titulo  => h1 ... h6  -->
+        <h1>Restaurante El Sazon</h1>
+    </header>
+    <!-- menu de navegacion -->
+    <nav>
+        <!-- listas ordenadas <ol> y listas desordenadas <ul>
+
+            lista ordenada = gato, perro, gallina <ol>
+            1. gato
+            2. perro
+            3. gallina
+
+            lista desordenada = gato, perro, gallina <ul>
+            . gato
+            . perro
+            . gallina
+        -->
+        <ul>
+            <!-- elementos de la lista <li> 
+                PAGINA principal, platillos, ubicacion
+            -->
+            <li>
+                <!-- hipervinculos <a>: redirecciona a un enlace o archivo que mandamos 
+                    dentro de la etiqueta <a> existe la propiedad href 
+                    href = es la ruta donde vamos a redireccionar -->
+                <a href="./index.html">Principal</a>
+            </li>
+            <li>
+                <a href="./platillos.html">Platillos</a>
+            </li>
+            <li>
+                <a href="#">Ubicacion</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- contenido principal <main> <section> <div> <article> -->
+    <main>
+        <section>
+            <!-- <img>: nos sirve para colocar una imagen 
+                src = ruta de donde esta ubicada la imagen
+                alt = nombre o titulo de la imagen
+
+                ./ = hace referencia a la raiz de la carpeta donde estamos trabajando
+            -->
+            <img src="./restaurante.jpg" alt="restaurante El Sazon" />
+        </section>
+        <section>
+            <!-- <p>: etiqueta para colocar parrafos -->
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit officia vel assumenda deleniti, repellat reiciendis hic, est iure rem exercitationem rerum pariatur ducimus error adipisci reprehenderit maiores mollitia, natus itaque.
+            </p>
+        </section>
+        <!--
+            contenido no tan relevante <aside> 
+        -->
+        <aside>
+            <h4>Dale Click Aqui!</h4>
+            <!-- <button>: etiqueta para colocar boton -->
+            <button>Promociones</button>
+        </aside>
+    </main>
+    <!-- apartado del pie de pagina  -->
+    <footer>
+        <h3>2023 Kenia Paiz</h3>
+    </footer>
+</body>
+</html>
+
+
+
+
+
