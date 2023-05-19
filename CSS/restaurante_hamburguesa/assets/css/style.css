@@ -172,6 +172,91 @@ h4{
     background-color: #cf9259;
 }
 
+/** apartado de menu de hamburguesas **/
+.menu_container{
+    display: flex;
+    justify-content: space-between; /* space-around, space-evenly */
+    align-items: center;
+    flex-flow: row wrap;
+    /** 
+        row: izquierda a derecha
+
+        nowrap: genera una sola linea
+
+        wrap: genera varias lineas en base a su contenedor
+    */
+}
+
+.card{
+    width: 30%;
+    height: 300px;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+    background-size: cover !important;
+    background-position: center !important;
+    text-align: center;
+}
+
+/** nth-child(): hace referencia   (pseudo-clase) */
+
+.card:nth-child(1){
+    background-image: url(../img/product1.jpg);
+}
+
+.card:nth-child(2){
+    background-image: url(../img/product2.jpg);
+}
+
+.card:nth-child(3){
+    background-image: url(../img/product3.jpg);
+}
+
+.card:nth-child(4){
+    background-image: url(../img/product4.jpg);
+}
+
+.card:nth-child(5){
+    background-image: url(../img/product5.jpg);
+}
+
+.card:nth-child(6){
+    background-image: url(../img/product6.jpg);
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    transition: all .5s;
+}
+
+.card:hover .card-container{
+    opacity: 1; 
+}
+
+.card-title{
+    font-size: 2.3rem;
+    font-weight: 400;
+    padding: 10px 0 0 0;
+}
+
+.btn-card{
+    background-color: #AB561D;
+    color: #FFF;
+    transition: all .5s;
+}
+
+.btn-card:hover{
+    transform: scale(1.1);
+}
+
+
+
 
 
 
