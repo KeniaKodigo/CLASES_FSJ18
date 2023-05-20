@@ -255,6 +255,128 @@ h4{
     transform: scale(1.1);
 }
 
+footer{
+    background-color: #222222;
+}
+
+.footer_container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px; /* representa el espacio entre el contenido de las cajitas */
+}
+
+.texto-contacto, h5{
+    font-size: 1.2rem;
+    color: #FF7B00;
+    text-align: left;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.footer-parrafo{
+    line-height: 40px;
+}
+
+p{
+    color: white;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row nowrap;
+    width: 60%;
+}
+
+.icons a{
+    background-color: #ff7b00;
+    border-radius: 50%;
+    margin: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    transition: all 0.5s;
+}
+
+.icons a:hover{
+    background-color: transparent;
+}
+
+/** UTILIZANDO PSEUDO-ELEMENT: BEFORE, AFTER */
+
+/** APARTADO DE MEDIA QUERIES */
+
+/** .overlay = es una clase de css que toma en cuenta una superposicion, donde ponemos los elementos encima de otro elemento */
+.overlay, .header::before, .ofertas::before {
+    content: ''; /* aplicamos contenido */
+    position: absolute; /** top, bottom, left, rigth */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header *, .ofertas *{
+    position: relative;
+}
+
+/** 
+    MAX-WIDTH: 576PX; //0px - 576
+    MIN-WIDTH: 577px; // 577px en adelante
+    min-width: 576px and max-width: 768px //medida de tablet
+    998 - 1100
+*/
+
+/** dispositivos pequeños */
+@media (max-width:576px){
+    .texto-principal{
+        font-size: 3rem;
+    }
+
+    .footer_container{
+        grid-template-columns: 1fr;
+    }
+
+    .card{
+        width: 100%;
+    }
+}
+
+/** aplicando para pantallas pequeñas, tablet */
+@media (max-width: 968px){
+    .about_container .content{
+        order: 1;
+        flex: 0 0 100%;
+        margin: 50px 0;
+    }
+
+    .content_image{
+        order: 0;
+        flex: 0 0 100%;
+    }
+
+    .icons{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
