@@ -1,0 +1,13 @@
+.img-carousel{
+    width: 100px;
+    height: 100px;
+}
+
+img{
+    object-fit: cover;
+}
+
+.card-img{
+    height: 250px;
+}
+
