@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Evento Onclick</h2>
+    <label for="">Ingresa tu nombre completo</label>
+    <input type="text" class="nombre" name="nombre" id="nombre">
+    <br>
+    <button onclick="obtenerNombre()">Obtener Nombre</button>
+
+    <h2>Evento Onchange</h2>
+    <label for="">Selecciona un curso</label>
+    <select class="cursos" onchange="seleccionarCurso()">
+        <option value="React JS">React JS</option>
+        <option value="Git & GitHub">Git & GitHub</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="HTML & CSS">HTML & CSS</option>
+    </select>
+    <!-- devolviendo el resultado del evento en un parrafo -->
+    <p></p>
+
+    <h3>Hola estamos en eventos</h3>
+
+    <h2>Evento Onsubmit</h2>
+    <form action="" onsubmit="verificarNumero()">
+        <label for="">Ingresa un numero</label>
+        <input type="number" name="numero">
+        <br>
+        <input type="submit" value="Verificar Numero">
+    </form>
+</body>
+<script>
+
+    function obtenerNombre(){
+        //capturando la entrada de datos
+        let nombre = document.getElementById('nombre');
+        console.log(nombre); //retorna el elemento html deseado (<input>)
+        console.log(nombre.value); //retorna el valor o texto del elemento
+        alert(`Hola! ${nombre.value}, le has dado click`);
+    }
+
+    function seleccionarCurso(){
+        //capturando la entrada
+        /**
+         *  clase => .nombre
+         *  id => #nombre
+         *  etiqueta => nombre de la etiqueta
+         *  atributo => a[href="#"]
+         */
+        let curso = document.querySelector(".cursos");
+        //donde vamos a devolver el resultado
+        let resultado = document.querySelector('p');
+        console.log(curso.value);
+        /**
+         * innerHTML = devuelve el resultado en el html
+         * textContent = devolvemos contenido al html y podemos capturar texto de una etiqueta 
+         */
+        //resultado.innerHTML = "Elegiste el curso " + curso.value
+        resultado.textContent = "Elegiste el curso " + curso.value;
+
+        //capturando el valor del h3
+        let subTitulo = document.querySelector('h3').textContent;
+        console.log(subTitulo);
+    }
+
+    //verificando si el numero es positivo, negativo o 0
+
+    function verificarNumero(){
+        //entrada de dato
+        //capturando el name de un input
+        let numero = document.querySelector('input[name="numero"]');
+        if(numero.value > 0){
+            alert("El numero es positivo");
+        }else if(numero.value < 0){
+            alert("El numero es negativo");
+        }else{
+            alert("El numero es 0");
+        }
+    }
+</script>
+</html>
