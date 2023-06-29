@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Lista de Cursos
+                    </a>
+                    <div class="dropdown-menu" id="carrito">
+                        <table class="table table-striped table-hover" id="lista-carrito">
+                            <thead>
+                                <th>Imagen</th>
+                                <th>Titulo</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th>SubTotal</th>
+                            </thead>
+                            <tbody><!-- apartado dinamico --></tbody>
+                            <tfoot><!-- apartado dinamico (total de cursos) --></tfoot>
+                        </table>
+                        <a href="#" class="btn btn-success" onclick="guardarPedido()">Guardar Pedido</a>
+
+                        <a href="#" id="vaciar-carrito" class="btn btn-danger">Vaciar Carrito</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container lista-cursos">
+        <h1 class="text-center text-primary">Cursos Disponibles</h1>
+        <section class="row">
+            <article class="col-md-4 mt-4">
+                <div class="card">
+                    <img src="./assets/img/curso1.jpg" class="card-img-top" alt="curso 1">
+                    <div class="card-body">
+                      <h5 class="card-title">HTML & CSS Basico</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p class="card-text precio">$15.00</p>
+                      <!-- data-*: es un elemento html que ayuda a identificar una etiqueta en especifico -->
+                      <a href="www.facebook.com" class="btn btn-primary agregar-carrito" data-id="1">Agregar Curso</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-md-4 mt-4">
+                <div class="card">
+                    <img src="./assets/img/curso2.jpg" class="card-img-top" alt="curso 1">
+                    <div class="card-body">
+                      <h5 class="card-title">Aprendiendo a Cocinar</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p class="card-text precio">$10.99</p>
+                      <!-- data-*: es un elemento html que ayuda a identificar una etiqueta en especifico -->
+                      <a href="#" class="btn btn-primary agregar-carrito" data-id="2">Agregar Curso</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-md-4 mt-4">
+                <div class="card">
+                    <img src="./assets/img/curso3.jpg" class="card-img-top" alt="curso 1">
+                    <div class="card-body">
+                      <h5 class="card-title">Clases de Guitarra</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p class="card-text precio">$32.75</p>
+                      <!-- data-*: es un elemento html que ayuda a identificar una etiqueta en especifico -->
+                      <a href="#" class="btn btn-primary agregar-carrito" data-id="3">Agregar Curso</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-md-4 mt-4">
+                <div class="card">
+                    <img src="./assets/img/curso4.jpg" class="card-img-top" alt="curso 1">
+                    <div class="card-body">
+                      <h5 class="card-title">Jardineria</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p class="card-text precio">$17.99</p>
+                      <!-- data-*: es un elemento html que ayuda a identificar una etiqueta en especifico -->
+                      <a href="#" class="btn btn-primary agregar-carrito" data-id="4">Agregar Curso</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-md-4 mt-4">
+                <div class="card">
+                    <img src="./assets/img/curso5.jpg" class="card-img-top" alt="curso 1">
+                    <div class="card-body">
+                      <h5 class="card-title">Adornos del Hogar</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p class="card-text precio">$6.50</p>
+                      <!-- data-*: es un elemento html que ayuda a identificar una etiqueta en especifico -->
+                      <a href="#" class="btn btn-primary agregar-carrito" data-id="5">Agregar Curso</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-md-4 mt-4">
+                <div class="card">
+                    <img src="./assets/img/curso1.jpg" class="card-img-top" alt="curso 1">
+                    <div class="card-body">
+                      <h5 class="card-title">JavaScript</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p class="card-text precio">$24.00</p>
+                      <!-- data-*: es un elemento html que ayuda a identificar una etiqueta en especifico -->
+                      <a href="#" class="btn btn-primary agregar-carrito" data-id="6">Agregar Curso</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="./assets/js/carrito.js"></script>
+</html>
