@@ -80,6 +80,7 @@ function iterarPalabra(){
     }
 }
 
+
 /**
  * contador = contador + 1;
  * 25 = 25 + 1; //26
@@ -115,6 +116,37 @@ let estudiantes = [
 ]
 
 console.log(estudiantes[0]); //estatico
+
+//while - do while
+let arreglo_nombres = ["ana","maria","moises","rodrigo"];
+document.write("<h2>Trabajando con while</h2>");
+let contador3 = 0;
+while(contador3 < arreglo_nombres.length){
+    document.write("Tu nombre: " + arreglo_nombres[contador3] + "<br>");
+    contador3++;
+}
+
+document.write("<h2>WHILE en decremento</h2>");
+let contador4 = arreglo_nombres.length - 1;
+while(contador4 >= 0){
+    document.write("Tu nombre: " + arreglo_nombres[contador4] + "<br>");
+    contador4--;
+}
+
+//do while (hacer mientras)
+let contador5 = 24;
+do{
+    document.write("Numero: " + contador5);
+    contador5++;
+}while(contador5 < 12);
+
+
+
+
+
+
+
+
 
 
 
