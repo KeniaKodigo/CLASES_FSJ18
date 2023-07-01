@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Inicio de Sesion</h1>
+    <form action="index.html" onsubmit="iniciarSesion()">
+        <label for="">Correo</label>
+        <input type="text" class="correo" required>
+        <br>
+        <label for="">Contraseña</label>
+        <input type="text" class="password" required>
+        <br>
+        <input type="submit" value="Iniciar Sesion">
+    </form>
+</body>
+<script>
+    function iniciarSesion(){
+        let correo = document.querySelector('.correo').value;
+        let password = document.querySelector('.password').value;
+
+        if(correo != "" && password != ""){
+            window.location = "index.html";
+            console.log("hola")
+        }else{
+            alert("Ingresa correo y contraseña");
+        }
+    }
+</script>
+</html>

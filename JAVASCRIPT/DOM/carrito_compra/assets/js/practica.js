@@ -32,3 +32,15 @@ let carrito = [
         id: "1"
     },
 ]
+
+
+let arreglo2 = ["ramon","carlos","danny","sara"];
+//sacar elementos en especifico de un arreglo
+arreglo2.slice(0, 1); //ramon
+//sirve para eliminar un elemento
+arreglo2.slice(1, -1); //carlos
+
+let string = "$15.00"; 
+ //15.00
+console.log(otro2);
+//carlos, danny
