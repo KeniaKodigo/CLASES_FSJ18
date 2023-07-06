@@ -37,6 +37,9 @@ function cargarEventos(){
             }
           })
     })
+
+    //evento para ejecutar el metodo eliminarItem
+    carrito.addEventListener('click', eliminarItem);
 }
 
 //metodo para saber que curso selecciono el usuario
@@ -64,10 +67,11 @@ function seleccionarCurso(e){
     }
 }
 
+
+
 //metodo para almacenar los valores del curso en un arreglo
 function leerDatosCurso(curso){
     //console.log(curso);
-
     const objetoCurso = {
         imagen: curso.querySelector('img').src, //capturando la direccion de la imagen
         titulo: curso.querySelector('h5').textContent, //capturando el texto del h5
@@ -105,8 +109,8 @@ function leerDatosCurso(curso){
 //metodo para iterar el arreglo y asignarlo en la tabla html
 function carritoTabla(){
 
-    limpiarTabla();
-
+    limpiarTabla(bodyCarrito);
+    let total_cursos = 0;
     arregloCarrito.map(item => {
         //creando elemento html (tr)
         const tr = document.createElement('tr');
@@ -131,15 +135,32 @@ function carritoTabla(){
                 <a href="#" class="borrar-item" data-id="${item.id}">X</a>
             </td>
         `;
+        //total_cursos = total_cursos + subTotal
+        total_cursos += subTotal;
+        
         //agregamos las filas dentro del tbody
         bodyCarrito.appendChild(tr);
     })
+
+    //creando fila para tfoot de la tabla (asignando el total de cursos)
+    //toFixed() => asignando cuantos numeros salgan despues del punto
+    //Math.round(5.6) = 6
+    limpiarTabla(footerCarrito);
+    const fila_foot = document.createElement('tr');
+    fila_foot.innerHTML = `
+        <td colspan="4">Total de Pedido</td>
+        <td>$${total_cursos.toFixed(2)}</td>
+    `;
+
+    //agregando la fila en el tfoot
+    footerCarrito.appendChild(fila_foot);
+    console.log(total_cursos);
 }
 
 //eliminando los hijos anteriores de la tabla
-function limpiarTabla(){
-    while(bodyCarrito.firstChild){
-        bodyCarrito.removeChild(bodyCarrito.firstChild);
+function limpiarTabla(contenedor){
+    while(contenedor.firstChild){
+        contenedor.removeChild(contenedor.firstChild);
     }
 }
 
@@ -161,6 +182,19 @@ function guardarPedido(){
           Swal.fire('Cambios no guardados', '', 'info')
         }
     })
+}
+
+//metodo para eliminar un curso en especifico
+function eliminarItem(e){
+    //verificando si la clase 'borrar-item' existe
+    if(e.target.classList.contains('borrar-item')){
+        //obtener el id del curso
+        const cursoId = e.target.getAttribute('data-id');
+        console.log(cursoId);
+        //filtrar todos los cursos que sean diferentes al id del curso que la persona selecciono
+        arregloCarrito = arregloCarrito.filter(curso => curso.id !== cursoId);
+        carritoTabla();
+    }
 }
 
 
