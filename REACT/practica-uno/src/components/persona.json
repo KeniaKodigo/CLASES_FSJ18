@@ -1,0 +1,36 @@
+[
+    {
+        "id": 1,
+        "nombre": "Isabel Hernandez Figueroa",
+        "edad": 28,
+        "imagen": "https://www.shutterstock.com/image-vector/long-hair-sunglasses-girl-avatar-260nw-1294453561.jpg"
+    }, 
+
+    {
+        "id": 2,
+        "nombre": "Marvin Leonel Chacon",
+        "edad": 24,
+        "imagen": "https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-1-avatar-2754574_120513.png"
+    },
+
+    {
+        "id": 3,
+        "nombre": "Karla Guadalupe Guevara",
+        "edad": 19,
+        "imagen": "https://www.shutterstock.com/image-vector/long-hair-sunglasses-girl-avatar-260nw-1294453561.jpg"
+    },
+
+    {
+        "id": 4,
+        "nombre": "Alexander Huezo",
+        "edad": 28,
+        "imagen": "https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-1-avatar-2754574_120513.png"
+    },
+
+    {
+        "id": 5,
+        "nombre": "Blanca Irene Sandoval",
+        "edad": 32,
+        "imagen": "https://www.shutterstock.com/image-vector/long-hair-sunglasses-girl-avatar-260nw-1294453561.jpg"
+    }
+]
