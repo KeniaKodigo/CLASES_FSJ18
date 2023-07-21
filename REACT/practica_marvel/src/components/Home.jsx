@@ -1,6 +1,7 @@
 import React from 'react'
 //importando la imagen
 import marvel from '../assets/img/marvel.png'
+import Eventos from './Eventos'
 
 export default function Home() {
     return (
@@ -17,6 +18,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+            <Eventos />
         </main>
     )
 }
