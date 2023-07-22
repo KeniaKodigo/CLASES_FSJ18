@@ -1,7 +1,9 @@
 import React from 'react'
 //importando react-router
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from './Home';
+import Comics from './Comics';
+import Busqueda from './Busqueda';
 
 export default function Header() {
     return (
@@ -9,8 +11,12 @@ export default function Header() {
             <header>
                 <nav>
                     <ul>
-                        <li>Home</li>
-                        <li>Comics</li>
+                        <li>
+                            <Link to="/" className='link'>Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/comics" className='link'>Comics</Link>
+                        </li>
                         <li>Series</li>
                     </ul>
                 </nav>
@@ -24,6 +30,8 @@ export default function Header() {
                  * element => hace referencia al componente que va tener la ruta
                 */}
                 <Route path='/' element={<Home />}/>
+                <Route path='/comics' element={<Comics />}/>
+                <Route path='/busqueda' element={<Busqueda />}/>
             </Routes>
         </BrowserRouter>
     )
