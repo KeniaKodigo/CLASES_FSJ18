@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from './Home';
 import Comics from './Comics';
 import Busqueda from './Busqueda';
+import Logout from './Logout';
+import Perfil from './Perfil';
 
 export default function Header() {
     return (
@@ -18,6 +20,12 @@ export default function Header() {
                             <Link to="/comics" className='link'>Comics</Link>
                         </li>
                         <li>Series</li>
+                        <li>
+                            <Link to="/perfil" className='link'>Usuario</Link>
+                        </li>
+                        <li>
+                            <Logout />
+                        </li>
                     </ul>
                 </nav>
             </header>
@@ -32,6 +40,7 @@ export default function Header() {
                 <Route path='/' element={<Home />}/>
                 <Route path='/comics' element={<Comics />}/>
                 <Route path='/busqueda' element={<Busqueda />}/>
+                <Route path='/perfil' element={<Perfil />}/>
             </Routes>
         </BrowserRouter>
     )
